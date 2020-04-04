@@ -7,21 +7,16 @@ import {
 import ChatMessage from './ChatMessage/ChatMessage.component';
 import { useSelector } from 'react-redux';
 import { useFirebaseConnect, isLoaded } from 'react-redux-firebase';
-import { RootState } from '../../redux/types';
+import { RootState, Message } from '../../redux/types';
 var randomColor = require('randomcolor');
 
-type Message = {
-  text: string;
-  timestamp: number;
-  user: string;
-};
 type FirebaseMessage = {
   key: string;
   value: Message;
 };
 
 let init = false;
-const selectMessages = (state: any) => state.firebase.ordered.messages; // todo TSnpm
+const selectMessages = (state: RootState) => state.firebase.ordered.messages; // todo TSnpm
 const ChatHistory = () => {
   useFirebaseConnect(['messages']);
   const messages: FirebaseMessage[] = useSelector(selectMessages);
