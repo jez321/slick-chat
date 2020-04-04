@@ -18,7 +18,7 @@ export const AppHeader = styled.header`
   color: white;
   h1,
   div {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem 0;
   }
 `;

@@ -1,5 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { AppWrapper, AppHeader } from './App.styles';
 import { RootState } from './redux/types';
 import ChatInput from './components/ChatInput/ChatInput.component';
@@ -13,7 +15,12 @@ const App = () => {
     <AppWrapper>
       <AppHeader>
         <h1>SlickChat</h1>
-        <div>{user}</div>
+        {user ? (
+          <div>
+            <FontAwesomeIcon icon={faUser} />
+            &nbsp;{user}
+          </div>
+        ) : null}
       </AppHeader>
       {user ? (
         <>

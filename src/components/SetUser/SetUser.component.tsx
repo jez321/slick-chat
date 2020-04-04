@@ -1,5 +1,7 @@
 import React, { useState, useRef, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { SET_USER } from '../../redux/app/actions';
 import SlickButton from '../SlickButton/SlickButton.component';
 import { SetUserSection } from './SetUser.styles';
@@ -59,7 +61,8 @@ const SetUser = () => {
         ) : null}
         <div style={{ marginTop: '2rem', textAlign: 'center' }}>
           <SlickButton style={{ borderRadius: '5px' }} type="submit">
-            ログイン
+            <FontAwesomeIcon icon={faSignInAlt} />
+            &nbsp;ログイン
           </SlickButton>
         </div>
       </form>

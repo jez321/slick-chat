@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import { useFirebase } from 'react-redux-firebase';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import {
   ChatInputControl,
   ChatInputFooter,
@@ -54,7 +56,8 @@ const ChatInput = () => {
           style={{ fontSize: '1.3rem' }}
           disabled={messageText.trim() === ''}
           onClick={handleSubmit}>
-          送信
+          <FontAwesomeIcon icon={faPaperPlane} />
+          &nbsp;送信
         </SlickButton>
       </ChatInputControl>
       <ChatInputFooter>Chat footer</ChatInputFooter>
