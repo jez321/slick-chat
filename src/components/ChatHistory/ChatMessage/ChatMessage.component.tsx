@@ -29,7 +29,7 @@ const ChatMessage = ({
         </span>
         &nbsp;
         <ChatMessageTimestamp>
-          <Moment unix fromNow>
+          <Moment locale="ja" unix fromNow>
             {timestamp}
           </Moment>
         </ChatMessageTimestamp>
