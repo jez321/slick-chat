@@ -12,31 +12,28 @@ type ChatMessageProps = {
   timestamp: number;
   color: string;
 };
-const ChatMessage = ({
-  children,
-  user,
-  timestamp,
-  color,
-}: ChatMessageProps) => {
-  return (
-    <ChatMessageItem>
-      <ChatMessageHeader>
-        <span
-          style={{
-            color,
-          }}>
-          {user}
-        </span>
-        &nbsp;
-        <ChatMessageTimestamp>
-          <Moment locale="ja" unix fromNow>
-            {timestamp}
-          </Moment>
-        </ChatMessageTimestamp>
-      </ChatMessageHeader>
-      <pre>{children}</pre>
-    </ChatMessageItem>
-  );
-};
+const ChatMessage = React.memo(
+  ({ children, user, timestamp, color }: ChatMessageProps) => {
+    return (
+      <ChatMessageItem>
+        <ChatMessageHeader>
+          <span
+            style={{
+              color,
+            }}>
+            {user}
+          </span>
+          &nbsp;
+          <ChatMessageTimestamp>
+            <Moment locale="ja" unix fromNow>
+              {timestamp}
+            </Moment>
+          </ChatMessageTimestamp>
+        </ChatMessageHeader>
+        <pre>{children}</pre>
+      </ChatMessageItem>
+    );
+  }
+);
 
 export default ChatMessage;
