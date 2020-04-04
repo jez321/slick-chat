@@ -23,3 +23,7 @@ export const ChatList = styled.ul`
     }
   }
 `;
+
+export const LoadingMessage = styled.div`
+  margin-bottom: 1rem;
+`;

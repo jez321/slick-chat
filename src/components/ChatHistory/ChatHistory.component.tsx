@@ -1,8 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { ChatList, ChatHistorySection } from './ChatHistory.styles';
+import {
+  ChatList,
+  ChatHistorySection,
+  LoadingMessage,
+} from './ChatHistory.styles';
 import ChatMessage from './ChatMessage/ChatMessage.component';
 import { useSelector } from 'react-redux';
-import { useFirebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+import { useFirebaseConnect, isLoaded } from 'react-redux-firebase';
 import { RootState } from '../../redux/types';
 var randomColor = require('randomcolor');
 
@@ -16,6 +20,7 @@ type FirebaseMessage = {
   value: Message;
 };
 
+let init = false;
 const selectMessages = (state: any) => state.firebase.ordered.messages; // todo TSnpm
 const ChatHistory = () => {
   useFirebaseConnect(['messages']);
@@ -23,33 +28,40 @@ const ChatHistory = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!messagesEndRef.current) return;
-    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current.scrollIntoView({
+      behavior: init ? 'smooth' : 'auto',
+    });
+    init = true;
   }, [messages]);
   const colorCache: any = {};
   return (
     <ChatHistorySection>
-      <ChatList>
-        {messages
-          ? messages.map(({ key, value: { user, text, timestamp } }) => {
-              if (!(user in colorCache)) {
-                colorCache[user] = randomColor({
-                  luminosity: 'dark',
-                  seed: user,
-                });
-              }
-              return (
-                <ChatMessage
-                  key={key}
-                  user={user}
-                  timestamp={timestamp}
-                  color={colorCache[user]}>
-                  {text}
-                </ChatMessage>
-              );
-            })
-          : null}
-        <div ref={messagesEndRef} />
-      </ChatList>
+      {isLoaded(messages) ? (
+        <ChatList>
+          {messages
+            ? messages.map(({ key, value: { user, text, timestamp } }) => {
+                if (!(user in colorCache)) {
+                  colorCache[user] = randomColor({
+                    luminosity: 'dark',
+                    seed: user,
+                  });
+                }
+                return (
+                  <ChatMessage
+                    key={key}
+                    user={user}
+                    timestamp={timestamp}
+                    color={colorCache[user]}>
+                    {text}
+                  </ChatMessage>
+                );
+              })
+            : null}
+          <div ref={messagesEndRef} />
+        </ChatList>
+      ) : (
+        <LoadingMessage>読み込み中...</LoadingMessage>
+      )}
     </ChatHistorySection>
   );
 };
