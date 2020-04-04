@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 import { useFirebase } from 'react-redux-firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,6 +14,7 @@ import { RootState } from '../../redux/types';
 
 const timestampeMsToS = (timestamp: number) => Math.floor(timestamp / 1000);
 const selectUser = (state: RootState) => state.app.user;
+let textareaRef: any;
 const ChatInput = () => {
   const firebase = useFirebase();
   const user = useSelector(selectUser);
@@ -26,6 +27,9 @@ const ChatInput = () => {
       timestamp: timestampeMsToS(Date.now()),
     };
     setMessageText('');
+    if (textareaRef) {
+      textareaRef.focus();
+    }
     return firebase.push('messages', message);
   };
 
@@ -51,6 +55,7 @@ const ChatInput = () => {
           onChange={handleChange}
           value={messageText}
           maxRows={4}
+          inputRef={(node: HTMLTextAreaElement) => (textareaRef = node)}
           autoFocus
         />
         <SlickButton
