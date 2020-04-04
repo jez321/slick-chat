@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/slick-chat/precache-manifest.d3e0c50a335db8621df39d3fd1fc8db0.js"
+  "/slick-chat/precache-manifest.e80120fcbe5a95d5bd66ef9cd5f02eb7.js"
 );
 
 self.addEventListener('message', (event) => {
