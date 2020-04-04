@@ -10,12 +10,24 @@ type ChatMessageProps = {
   children: React.ReactNode;
   user: string;
   timestamp: number;
+  color: string;
 };
-const ChatMessage = ({ children, user, timestamp }: ChatMessageProps) => {
+const ChatMessage = ({
+  children,
+  user,
+  timestamp,
+  color,
+}: ChatMessageProps) => {
   return (
     <ChatMessageItem>
       <ChatMessageHeader>
-        {user}&nbsp;
+        <span
+          style={{
+            color,
+          }}>
+          {user}
+        </span>
+        &nbsp;
         <ChatMessageTimestamp>
           <Moment unix fromNow>
             {timestamp}

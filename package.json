@@ -17,6 +17,7 @@
     "@types/styled-components": "^5.0.1",
     "firebase": "^7.13.2",
     "moment": "^2.24.0",
+    "randomcolor": "^0.5.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-modal": "^3.11.2",

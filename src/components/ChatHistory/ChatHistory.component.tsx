@@ -4,6 +4,7 @@ import ChatMessage from './ChatMessage/ChatMessage.component';
 import { useSelector } from 'react-redux';
 import { useFirebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase';
 import { RootState } from '../../redux/types';
+var randomColor = require('randomcolor');
 
 type Message = {
   text: string;
@@ -24,15 +25,28 @@ const ChatHistory = () => {
     if (!messagesEndRef.current) return;
     messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+  const colorCache: any = {};
   return (
     <ChatHistorySection>
       <ChatList>
         {messages
-          ? messages.map(({ key, value: { user, text, timestamp } }) => (
-              <ChatMessage key={key} user={user} timestamp={timestamp}>
-                {text}
-              </ChatMessage>
-            ))
+          ? messages.map(({ key, value: { user, text, timestamp } }) => {
+              if (!(user in colorCache)) {
+                colorCache[user] = randomColor({
+                  luminosity: 'dark',
+                  seed: user,
+                });
+              }
+              return (
+                <ChatMessage
+                  key={key}
+                  user={user}
+                  timestamp={timestamp}
+                  color={colorCache[user]}>
+                  {text}
+                </ChatMessage>
+              );
+            })
           : null}
         <div ref={messagesEndRef} />
       </ChatList>
