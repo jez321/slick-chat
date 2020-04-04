@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/slick-chat/static/css/main.fd7c4bf5.chunk.css",
-    "main.js": "/slick-chat/static/js/main.e3981cf4.chunk.js",
-    "main.js.map": "/slick-chat/static/js/main.e3981cf4.chunk.js.map",
+    "main.js": "/slick-chat/static/js/main.8806e938.chunk.js",
+    "main.js.map": "/slick-chat/static/js/main.8806e938.chunk.js.map",
     "runtime-main.js": "/slick-chat/static/js/runtime-main.bb4a6018.js",
     "runtime-main.js.map": "/slick-chat/static/js/runtime-main.bb4a6018.js.map",
     "static/js/2.d6310f30.chunk.js": "/slick-chat/static/js/2.d6310f30.chunk.js",
     "static/js/2.d6310f30.chunk.js.map": "/slick-chat/static/js/2.d6310f30.chunk.js.map",
     "index.html": "/slick-chat/index.html",
-    "precache-manifest.e80120fcbe5a95d5bd66ef9cd5f02eb7.js": "/slick-chat/precache-manifest.e80120fcbe5a95d5bd66ef9cd5f02eb7.js",
+    "precache-manifest.6b77e98e1071359476bf5213bc764e70.js": "/slick-chat/precache-manifest.6b77e98e1071359476bf5213bc764e70.js",
     "service-worker.js": "/slick-chat/service-worker.js",
     "static/css/main.fd7c4bf5.chunk.css.map": "/slick-chat/static/css/main.fd7c4bf5.chunk.css.map",
     "static/js/2.d6310f30.chunk.js.LICENSE.txt": "/slick-chat/static/js/2.d6310f30.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bb4a6018.js",
     "static/js/2.d6310f30.chunk.js",
     "static/css/main.fd7c4bf5.chunk.css",
-    "static/js/main.e3981cf4.chunk.js"
+    "static/js/main.8806e938.chunk.js"
   ]
 }
