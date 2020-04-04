@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/slick-chat/static/css/main.c53c4143.chunk.css",
+    "main.js": "/slick-chat/static/js/main.06a91690.chunk.js",
+    "main.js.map": "/slick-chat/static/js/main.06a91690.chunk.js.map",
+    "runtime-main.js": "/slick-chat/static/js/runtime-main.bb4a6018.js",
+    "runtime-main.js.map": "/slick-chat/static/js/runtime-main.bb4a6018.js.map",
+    "static/js/2.a8e31d27.chunk.js": "/slick-chat/static/js/2.a8e31d27.chunk.js",
+    "static/js/2.a8e31d27.chunk.js.map": "/slick-chat/static/js/2.a8e31d27.chunk.js.map",
+    "index.html": "/slick-chat/index.html",
+    "precache-manifest.08da459e9e48e484f332db11374f4ce2.js": "/slick-chat/precache-manifest.08da459e9e48e484f332db11374f4ce2.js",
+    "service-worker.js": "/slick-chat/service-worker.js",
+    "static/css/main.c53c4143.chunk.css.map": "/slick-chat/static/css/main.c53c4143.chunk.css.map",
+    "static/js/2.a8e31d27.chunk.js.LICENSE.txt": "/slick-chat/static/js/2.a8e31d27.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bb4a6018.js",
+    "static/js/2.a8e31d27.chunk.js",
+    "static/css/main.c53c4143.chunk.css",
+    "static/js/main.06a91690.chunk.js"
+  ]
+}
