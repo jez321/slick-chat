@@ -51,9 +51,10 @@ const ChatInput = () => {
           autoFocus
         />
         <SlickButton
+          style={{ fontSize: '1.3rem' }}
           disabled={messageText.trim() === ''}
           onClick={handleSubmit}>
-          Send
+          送信
         </SlickButton>
       </ChatInputControl>
       <ChatInputFooter>Chat footer</ChatInputFooter>

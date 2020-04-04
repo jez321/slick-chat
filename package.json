@@ -20,7 +20,6 @@
     "randomcolor": "^0.5.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-modal": "^3.11.2",
     "react-moment": "^0.9.7",
     "react-redux": "^7.2.0",
     "react-redux-firebase": "^3.3.0",

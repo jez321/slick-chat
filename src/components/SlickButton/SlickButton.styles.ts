@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const SlickButtonWrapper = styled.button`
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 1rem 2rem;
-  height: 4rem;
   background-color: #444;
   border: none;
   color: white;
