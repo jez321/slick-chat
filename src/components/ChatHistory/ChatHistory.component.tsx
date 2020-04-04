@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ChatList, ChatHistorySection } from './ChatHistory.styles';
 import ChatMessage from './ChatMessage/ChatMessage.component';
 import { useSelector } from 'react-redux';
@@ -19,6 +19,11 @@ const selectMessages = (state: any) => state.firebase.ordered.messages; // todo 
 const ChatHistory = () => {
   useFirebaseConnect(['messages']);
   const messages: FirebaseMessage[] = useSelector(selectMessages);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!messagesEndRef.current) return;
+    messagesEndRef.current.scrollIntoView(false);
+  }, [messages]);
   return (
     <ChatHistorySection>
       <ChatList>
@@ -29,6 +34,7 @@ const ChatHistory = () => {
               </ChatMessage>
             ))
           : null}
+        <div ref={messagesEndRef} />
       </ChatList>
     </ChatHistorySection>
   );
