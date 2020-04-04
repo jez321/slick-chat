@@ -22,7 +22,7 @@ const ChatHistory = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!messagesEndRef.current) return;
-    messagesEndRef.current.scrollIntoView(false);
+    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
   return (
     <ChatHistorySection>

@@ -50,9 +50,7 @@ const ChatInput = () => {
           value={messageText}
           autoFocus
         />
-        <SlickButton onClick={handleSubmit} style={{ height: '4.1rem' }}>
-          Send
-        </SlickButton>
+        <SlickButton onClick={handleSubmit}>Send</SlickButton>
       </ChatInputControl>
       <ChatInputFooter>Chat footer</ChatInputFooter>
     </ChatInputSection>

@@ -16,8 +16,8 @@ export const ChatInputControl = styled.div`
   justify-content: stretch;
   textarea {
     resize: none;
-    font-size: 2rem;
-    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    padding: 0.85rem 2rem;
     flex: 1 0 0;
   }
 `;
