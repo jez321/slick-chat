@@ -50,10 +50,11 @@ const ChatInput = () => {
           onKeyUp={handleKeyUp}
           onChange={handleChange}
           value={messageText}
+          maxRows={4}
           autoFocus
         />
         <SlickButton
-          style={{ fontSize: '1.3rem' }}
+          style={{ fontSize: '1.3rem', height: '4rem' }}
           disabled={messageText.trim() === ''}
           onClick={handleSubmit}>
           <FontAwesomeIcon icon={faPaperPlane} />
