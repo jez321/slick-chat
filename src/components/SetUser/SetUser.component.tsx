@@ -24,24 +24,13 @@ const SetUser = () => {
       user: val,
     });
   };
-  const customStyles = {
-    content: {
-      top: '20%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      padding: '2rem',
-    },
-  };
   return (
     <SetUserSection>
-      <h3 style={{ marginTop: 0, textAlign: 'center' }}>
+      <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>
         ユーザー名を指定してください
       </h3>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '1rem', textAlign: 'center' }}>
+        <div style={{ marginBottom: '1rem' }}>
           <input
             autoFocus
             ref={userInputRef}
@@ -59,7 +48,7 @@ const SetUser = () => {
             1~30文字のユーザー名を入力してください。
           </div>
         ) : null}
-        <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <div style={{ marginTop: '2rem' }}>
           <SlickButton style={{ borderRadius: '5px' }} type="submit">
             <FontAwesomeIcon icon={faSignInAlt} />
             &nbsp;ログイン
