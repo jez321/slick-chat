@@ -15,8 +15,12 @@ const App = () => {
         <h1>SlickChat</h1>
         <div>{user}</div>
       </AppHeader>
-      <ChatHistory></ChatHistory>
-      <ChatInput></ChatInput>
+      {user ? (
+        <>
+          <ChatHistory></ChatHistory>
+          <ChatInput></ChatInput>
+        </>
+      ) : null}
       <SetUserModal></SetUserModal>
     </AppWrapper>
   );
