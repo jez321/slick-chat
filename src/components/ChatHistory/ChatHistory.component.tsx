@@ -1,37 +1,34 @@
 import React from 'react';
 import { ChatList, ChatHistorySection } from './ChatHistory.styles';
 import ChatMessage from './ChatMessage/ChatMessage.component';
+import { useSelector } from 'react-redux';
+import { useFirebaseConnect, isLoaded, isEmpty } from 'react-redux-firebase';
+import { RootState } from '../../redux/types';
 
+type Message = {
+  text: string;
+  timestamp: number;
+  user: string;
+};
+type FirebaseMessage = {
+  key: string;
+  value: Message;
+};
+
+const selectMessages = (state: any) => state.firebase.ordered.messages; // todo TSnpm
 const ChatHistory = () => {
-  /* reduxから取得 */
-  const messages = [
-    {
-      id: 3,
-      user: 'UserOne',
-      message: 'This is yet another message',
-      time: new Date(2020, 3, 29, 9, 24, 33)
-    },
-    {
-      id: 2,
-      user: 'UserOne',
-      message: 'This is a message',
-      time: new Date(2020, 3, 29, 9, 25, 33)
-    },
-    {
-      id: 1,
-      user: 'UserOne',
-      message: 'This is another',
-      time: new Date(2020, 3, 29, 9, 26, 33)
-    }
-  ];
+  useFirebaseConnect(['messages']);
+  const messages: FirebaseMessage[] = useSelector(selectMessages);
   return (
     <ChatHistorySection>
       <ChatList>
-        {messages.map(({ id, user, message, time }) => (
-          <ChatMessage key={id} user={user} time={time}>
-            {message}
-          </ChatMessage>
-        ))}
+        {messages
+          ? messages.map(({ key, value: { user, text, timestamp } }) => (
+              <ChatMessage key={key} user={user} timestamp={timestamp}>
+                {text}
+              </ChatMessage>
+            ))
+          : null}
       </ChatList>
     </ChatHistorySection>
   );

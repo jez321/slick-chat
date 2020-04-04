@@ -2,20 +2,19 @@ import React from 'react';
 import {
   ChatMessageItem,
   ChatMessageHeader,
-  ChatMessageTimestamp
+  ChatMessageTimestamp,
 } from './ChatMessage.styles';
 
 type ChatMessageProps = {
   children: React.ReactNode;
   user: string;
-  time: Date;
+  timestamp: number;
 };
-const ChatMessage = ({ children, user, time }: ChatMessageProps) => {
+const ChatMessage = ({ children, user, timestamp }: ChatMessageProps) => {
   return (
     <ChatMessageItem>
       <ChatMessageHeader>
-        {user}{' '}
-        <ChatMessageTimestamp>{time.toLocaleTimeString()}</ChatMessageTimestamp>
+        {user} <ChatMessageTimestamp>{timestamp}</ChatMessageTimestamp>
       </ChatMessageHeader>
       <pre>{children}</pre>
     </ChatMessageItem>
