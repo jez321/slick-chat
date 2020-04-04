@@ -15,4 +15,7 @@ export const SlickButtonWrapper = styled.button`
   &:active {
     background-color: #666;
   }
+  &:disabled {
+    opacity: 0.6;
+  }
 `;

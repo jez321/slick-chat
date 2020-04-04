@@ -36,7 +36,7 @@ const ChatInput = () => {
   };
 
   const handleKeyUp = (event: any) => {
-    if (event.key === 'Enter' && event.shiftKey) {
+    if (messageText.trim() !== '' && event.key === 'Enter' && event.shiftKey) {
       postMessage();
     }
   };
@@ -50,7 +50,11 @@ const ChatInput = () => {
           value={messageText}
           autoFocus
         />
-        <SlickButton onClick={handleSubmit}>Send</SlickButton>
+        <SlickButton
+          disabled={messageText.trim() === ''}
+          onClick={handleSubmit}>
+          Send
+        </SlickButton>
       </ChatInputControl>
       <ChatInputFooter>Chat footer</ChatInputFooter>
     </ChatInputSection>
