@@ -1,4 +1,5 @@
 import React from 'react';
+import Moment from 'react-moment';
 import {
   ChatMessageItem,
   ChatMessageHeader,
@@ -14,7 +15,12 @@ const ChatMessage = ({ children, user, timestamp }: ChatMessageProps) => {
   return (
     <ChatMessageItem>
       <ChatMessageHeader>
-        {user} <ChatMessageTimestamp>{timestamp}</ChatMessageTimestamp>
+        {user}&nbsp;
+        <ChatMessageTimestamp>
+          <Moment unix fromNow>
+            {timestamp}
+          </Moment>
+        </ChatMessageTimestamp>
       </ChatMessageHeader>
       <pre>{children}</pre>
     </ChatMessageItem>

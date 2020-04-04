@@ -3,11 +3,13 @@ import TextareaAutosize from 'react-textarea-autosize';
 import {
   ChatInputControl,
   ChatInputFooter,
-  ChatInputSection
+  ChatInputSection,
 } from './ChatInput.styles';
 import SlickButton from '../SlickButton/SlickButton.component';
 
 const ChatInput = () => {
+  // Math.floor(Date.now() / 1000)
+
   return (
     <ChatInputSection>
       <ChatInputControl>
