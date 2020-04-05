@@ -3,11 +3,7 @@ import TextareaAutosize from 'react-textarea-autosize';
 import { useFirebase } from 'react-redux-firebase';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import {
-  ChatInputControl,
-  ChatInputFooter,
-  ChatInputSection,
-} from './ChatInput.styles';
+import { ChatInputControl, ChatInputSection } from './ChatInput.styles';
 import SlickButton from '../SlickButton/SlickButton.component';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../redux/types';
@@ -66,7 +62,6 @@ const ChatInput = () => {
           &nbsp;送信
         </SlickButton>
       </ChatInputControl>
-      <ChatInputFooter>Chat footer</ChatInputFooter>
     </ChatInputSection>
   );
 };

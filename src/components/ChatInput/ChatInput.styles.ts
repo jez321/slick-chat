@@ -1,16 +1,11 @@
 import styled from 'styled-components';
-import { BG_COLOR, FONTSIZE_NORMAL } from '../../styles/Variables';
+import { FONTSIZE_NORMAL } from '../../styles/Variables';
 
 export const ChatInput = styled.section`
   text-align: left;
   width: 100%;
 `;
 
-export const ChatInputFooter = styled.div`
-  background-color: ${BG_COLOR};
-  padding: 0.5rem 2rem;
-  color: #ccc;
-`;
 export const ChatInputControl = styled.div`
   display: flex;
   justify-content: stretch;

@@ -2,7 +2,7 @@ import React, { useState, useRef, FormEvent } from 'react';
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
-import { SET_USER } from '../../redux/app/actions';
+import { setUser } from '../../redux/app/actions';
 import SlickButton from '../SlickButton/SlickButton.component';
 import {
   SetUserSection,
@@ -24,10 +24,7 @@ const SetUser = () => {
       setHasError(true);
       return;
     }
-    dispatch({
-      type: SET_USER,
-      user: val,
-    });
+    dispatch(setUser(val));
   };
   return (
     <SetUserSection>

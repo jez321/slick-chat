@@ -1,23 +1,16 @@
+import { AppState, SetUserAction } from './types';
 import { SET_USER } from './actions';
-import { AppState } from './types';
 
-interface SET_USER_ACTION {
-  type: typeof SET_USER;
-  user: string;
-}
 const initialState: AppState = {
-  user: ''
+  user: '',
 };
 
-const appReducer = (
-  state: AppState = initialState,
-  action: SET_USER_ACTION
-) => {
+const appReducer = (state: AppState = initialState, action: SetUserAction) => {
   switch (action.type) {
     case SET_USER:
       return {
         ...state,
-        user: action.user
+        user: action.user,
       };
     default:
       return state;

@@ -1,6 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import firebase from 'firebase';
-import thunkMiddleware from 'redux-thunk';
 import rootReducer from './rootReducer';
 
 const firebaseConfig = {
@@ -13,7 +12,7 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-export const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+export const store = createStore(rootReducer);
 const firebaseReducerConfig = {
   userProfile: 'users',
 };
