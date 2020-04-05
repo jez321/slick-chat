@@ -29,8 +29,8 @@ export const GlobalStyle = createGlobalStyle`
   pre {
     font-family: inherit;
     margin: 0;
+    white-space: pre-wrap;
     word-break: break-word;
-    white-space: normal;
   }
 
   textarea {
