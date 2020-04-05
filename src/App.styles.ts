@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BG_COLOR } from './styles/Variables';
+import { BG_COLOR, FONTSIZE_LARGE } from './styles/Variables';
 
 export const AppWrapper = styled.div`
   text-align: center;
@@ -12,13 +12,13 @@ export const AppWrapper = styled.div`
 
 export const AppHeader = styled.header`
   background-color: ${BG_COLOR};
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   color: white;
   h1,
   div {
-    font-size: 2rem;
+    font-size: ${FONTSIZE_LARGE};
     margin: 1rem 0;
   }
 `;

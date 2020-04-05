@@ -4,7 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { SET_USER } from '../../redux/app/actions';
 import SlickButton from '../SlickButton/SlickButton.component';
-import { SetUserSection } from './SetUser.styles';
+import {
+  SetUserSection,
+  SetUserHeader,
+  SetUserErrorMessage,
+  SetUserInput,
+} from './SetUser.styles';
 
 const SetUser = () => {
   const [hasError, setHasError] = useState(false);
@@ -26,34 +31,27 @@ const SetUser = () => {
   };
   return (
     <SetUserSection>
-      <h3 style={{ marginTop: 0, marginBottom: '1rem' }}>
-        ユーザー名を指定してください
-      </h3>
+      <SetUserHeader>ユーザー名を指定してください</SetUserHeader>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '1rem' }}>
-          <input
+          <SetUserInput
+            placeholder="ユーザー名"
             autoFocus
             ref={userInputRef}
-            style={{
-              fontSize: '2rem',
-              padding: '1rem',
-              border: 'solid 1px #999',
-              borderRadius: '5px',
-            }}
             type="text"
           />
         </div>
         {hasError ? (
-          <div style={{ color: 'red' }}>
+          <SetUserErrorMessage>
             1~30文字のユーザー名を入力してください。
-          </div>
+          </SetUserErrorMessage>
         ) : null}
-        <div style={{ marginTop: '2rem' }}>
-          <SlickButton style={{ borderRadius: '5px' }} type="submit">
-            <FontAwesomeIcon icon={faSignInAlt} />
-            &nbsp;ログイン
-          </SlickButton>
-        </div>
+        <SlickButton
+          style={{ borderRadius: '5px', marginTop: '1rem' }}
+          type="submit">
+          <FontAwesomeIcon icon={faSignInAlt} />
+          &nbsp;ログイン
+        </SlickButton>
       </form>
     </SetUserSection>
   );

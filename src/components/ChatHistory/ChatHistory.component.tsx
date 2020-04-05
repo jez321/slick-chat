@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import {
   ChatList,
   ChatHistorySection,
@@ -16,11 +16,10 @@ type FirebaseMessage = {
   value: Message;
 };
 
-const selectMessages = (state: RootState) => state.firebase.ordered.messages; // todo TSnpm
+const selectMessages = (state: RootState) => state.firebase.ordered.messages;
 const ChatHistory = () => {
   useFirebaseConnect(['messages']);
   const messages: FirebaseMessage[] = useSelector(selectMessages);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     scroll.scrollToBottom({
       smooth: true,
@@ -52,7 +51,6 @@ const ChatHistory = () => {
                 );
               })
             : null}
-          <div ref={messagesEndRef} />
         </ChatList>
       ) : (
         <LoadingMessage>読み込み中...</LoadingMessage>

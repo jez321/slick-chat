@@ -4,6 +4,7 @@ import {
   ChatMessageItem,
   ChatMessageHeader,
   ChatMessageTimestamp,
+  ChatMessageUser,
 } from './ChatMessage.styles';
 
 type ChatMessageProps = {
@@ -17,12 +18,7 @@ const ChatMessage = React.memo(
     return (
       <ChatMessageItem>
         <ChatMessageHeader>
-          <span
-            style={{
-              color,
-            }}>
-            {user}
-          </span>
+          <ChatMessageUser color={color}>{user}</ChatMessageUser>
           &nbsp;
           <ChatMessageTimestamp>
             <Moment locale="ja" unix fromNow>

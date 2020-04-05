@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { FONTSIZE_NORMAL } from '../../styles/Variables';
 
 export const SlickButtonWrapper = styled.button`
-  font-size: 1.6rem;
+  font-size: ${FONTSIZE_NORMAL};
   padding: 1rem 2rem;
   background-color: #444;
   border: none;

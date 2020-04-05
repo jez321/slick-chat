@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BG_COLOR } from '../../styles/Variables';
+import { BG_COLOR, FONTSIZE_NORMAL } from '../../styles/Variables';
 
 export const ChatInput = styled.section`
   text-align: left;
@@ -16,8 +16,9 @@ export const ChatInputControl = styled.div`
   justify-content: stretch;
   textarea {
     resize: none;
-    font-size: 1.6rem;
-    padding: 0.85rem 2rem;
+    font-size: ${FONTSIZE_NORMAL};
+    min-height: 4rem;
+    padding: 0.85rem 1rem;
     flex: 1 0 0;
   }
 `;

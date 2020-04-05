@@ -8,6 +8,10 @@ export const ChatMessageHeader = styled.header`
   font-weight: bold;
 `;
 
+export const ChatMessageUser = styled.span`
+  color: ${(props) => props.color};
+`;
+
 export const ChatMessageTimestamp = styled.span`
   font-weight: normal;
 `;

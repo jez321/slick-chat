@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ChatHistorySection = styled.section`
-  padding: 0 2rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -13,15 +13,6 @@ export const ChatList = styled.ul`
   padding-left: 0;
   margin: 0;
   height: 100%;
-  li {
-    padding: 1rem 0;
-    header {
-      font-weight: bold;
-      .timestamp {
-        font-weight: normal;
-      }
-    }
-  }
 `;
 
 export const LoadingMessage = styled.div`
