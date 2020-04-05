@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { AppWrapper, AppHeader } from './App.styles';
+import { AppWrapper, AppHeader, AppFooter } from './App.styles';
 import { RootState } from './redux/types';
 import ChatInput from './components/ChatInput/ChatInput.component';
 import ChatHistory from './components/ChatHistory/ChatHistory.component';
@@ -26,6 +26,7 @@ const App = () => {
         <>
           <ChatHistory></ChatHistory>
           <ChatInput></ChatInput>
+          <AppFooter>Shift+Enter：送信</AppFooter>
         </>
       ) : (
         <SetUser></SetUser>

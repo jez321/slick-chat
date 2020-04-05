@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BG_COLOR, FONTSIZE_LARGE } from './styles/Variables';
+import { BG_COLOR, FONTSIZE_LARGE, FONTSIZE_SMALL } from './styles/Variables';
 
 export const AppWrapper = styled.div`
   text-align: center;
@@ -21,4 +21,11 @@ export const AppHeader = styled.header`
     font-size: ${FONTSIZE_LARGE};
     margin: 1rem 0;
   }
+`;
+
+export const AppFooter = styled.footer`
+  background-color: ${BG_COLOR};
+  padding: 0.1rem 1rem;
+  color: #aaa;
+  font-size: ${FONTSIZE_SMALL};
 `;
