@@ -1,22 +1,19 @@
 {
   "files": {
-    "main.css": "/slick-chat/static/css/main.fd7c4bf5.chunk.css",
-    "main.js": "/slick-chat/static/js/main.b3155243.chunk.js",
-    "main.js.map": "/slick-chat/static/js/main.b3155243.chunk.js.map",
+    "main.js": "/slick-chat/static/js/main.a154beac.chunk.js",
+    "main.js.map": "/slick-chat/static/js/main.a154beac.chunk.js.map",
     "runtime-main.js": "/slick-chat/static/js/runtime-main.bb4a6018.js",
     "runtime-main.js.map": "/slick-chat/static/js/runtime-main.bb4a6018.js.map",
-    "static/js/2.ec8b254d.chunk.js": "/slick-chat/static/js/2.ec8b254d.chunk.js",
-    "static/js/2.ec8b254d.chunk.js.map": "/slick-chat/static/js/2.ec8b254d.chunk.js.map",
+    "static/js/2.2c2b8508.chunk.js": "/slick-chat/static/js/2.2c2b8508.chunk.js",
+    "static/js/2.2c2b8508.chunk.js.map": "/slick-chat/static/js/2.2c2b8508.chunk.js.map",
     "index.html": "/slick-chat/index.html",
-    "precache-manifest.4931bf6e219152eaf0472e4282c42556.js": "/slick-chat/precache-manifest.4931bf6e219152eaf0472e4282c42556.js",
+    "precache-manifest.f44469b856c52ef0fca0567926837bad.js": "/slick-chat/precache-manifest.f44469b856c52ef0fca0567926837bad.js",
     "service-worker.js": "/slick-chat/service-worker.js",
-    "static/css/main.fd7c4bf5.chunk.css.map": "/slick-chat/static/css/main.fd7c4bf5.chunk.css.map",
-    "static/js/2.ec8b254d.chunk.js.LICENSE.txt": "/slick-chat/static/js/2.ec8b254d.chunk.js.LICENSE.txt"
+    "static/js/2.2c2b8508.chunk.js.LICENSE.txt": "/slick-chat/static/js/2.2c2b8508.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb4a6018.js",
-    "static/js/2.ec8b254d.chunk.js",
-    "static/css/main.fd7c4bf5.chunk.css",
-    "static/js/main.b3155243.chunk.js"
+    "static/js/2.2c2b8508.chunk.js",
+    "static/js/main.a154beac.chunk.js"
   ]
 }
