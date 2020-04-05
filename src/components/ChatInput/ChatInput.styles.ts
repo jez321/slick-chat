@@ -13,6 +13,7 @@ export const ChatInputControl = styled.div`
     resize: none;
     font-size: ${FONTSIZE_NORMAL};
     min-height: 4rem;
+    margin: 0;
     padding: 0.85rem 1rem;
     flex: 1 0 0;
   }
