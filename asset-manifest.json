@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/slick-chat/static/js/main.a154beac.chunk.js",
-    "main.js.map": "/slick-chat/static/js/main.a154beac.chunk.js.map",
+    "main.js": "/slick-chat/static/js/main.bc7d1646.chunk.js",
+    "main.js.map": "/slick-chat/static/js/main.bc7d1646.chunk.js.map",
     "runtime-main.js": "/slick-chat/static/js/runtime-main.bb4a6018.js",
     "runtime-main.js.map": "/slick-chat/static/js/runtime-main.bb4a6018.js.map",
     "static/js/2.2c2b8508.chunk.js": "/slick-chat/static/js/2.2c2b8508.chunk.js",
     "static/js/2.2c2b8508.chunk.js.map": "/slick-chat/static/js/2.2c2b8508.chunk.js.map",
     "index.html": "/slick-chat/index.html",
-    "precache-manifest.f44469b856c52ef0fca0567926837bad.js": "/slick-chat/precache-manifest.f44469b856c52ef0fca0567926837bad.js",
+    "precache-manifest.f922ba9e1d6d922ce41e66ba93ad7a8a.js": "/slick-chat/precache-manifest.f922ba9e1d6d922ce41e66ba93ad7a8a.js",
     "service-worker.js": "/slick-chat/service-worker.js",
     "static/js/2.2c2b8508.chunk.js.LICENSE.txt": "/slick-chat/static/js/2.2c2b8508.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bb4a6018.js",
     "static/js/2.2c2b8508.chunk.js",
-    "static/js/main.a154beac.chunk.js"
+    "static/js/main.bc7d1646.chunk.js"
   ]
 }
