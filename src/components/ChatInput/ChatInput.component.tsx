@@ -26,13 +26,14 @@ const ChatInput = () => {
     if (textareaRef) {
       textareaRef.focus();
     }
-    return firebase.push('messages', message);
+    firebase.push('messages', message);
   };
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
     postMessage();
   };
+
   const handleChange = (event: any) => {
     setMessageText(event.target.value);
   };
