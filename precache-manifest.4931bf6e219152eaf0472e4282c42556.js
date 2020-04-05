@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2c31c59401379fe960eb67a1cd29925",
+    "revision": "e9baa97bd2dc9655e400c4412e5a93f6",
     "url": "/slick-chat/index.html"
   },
   {
-    "revision": "90b40649612aa3d878c4",
+    "revision": "a5880580f945993fa0d1",
     "url": "/slick-chat/static/css/main.fd7c4bf5.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/slick-chat/static/js/2.ec8b254d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "90b40649612aa3d878c4",
-    "url": "/slick-chat/static/js/main.541fd310.chunk.js"
+    "revision": "a5880580f945993fa0d1",
+    "url": "/slick-chat/static/js/main.b3155243.chunk.js"
   },
   {
     "revision": "8241627e997821bf0a15",
